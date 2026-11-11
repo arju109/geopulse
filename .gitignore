@@ -1,0 +1,13 @@
+.env
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+target/
+logs/
+*.parquet
+*.csv
+!spark_sedona/sample_data/*.csv
+dbt_project/target/
+dbt_project/dbt_packages/
+.DS_Store
