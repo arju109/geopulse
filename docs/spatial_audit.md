@@ -42,3 +42,5 @@ Screenshots are in `docs/images/` (Jobs tab, Executors tab).
 
 \- Cross-check: on the 10k sample, the buffer method gave 7,485 and the distance method 7,500 (0.2% difference).
 
+- Output was counted (not written to disk) because Parquet writes on Windows need native Hadoop libraries.
+  The full join still runs over all points. Writing to Parquet will be done in WSL/Linux and in Airflow.

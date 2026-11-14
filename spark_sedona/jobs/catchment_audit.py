@@ -42,11 +42,9 @@ result = sedona.sql("""
 """)
 
 # Write to disk instead of toPandas(), so nothing is pulled into memory
-result.write.mode("overwrite").parquet(OUT)
+n_hits = result.count()          # forces the full 2M-point join, nothing written to disk
 
 elapsed = time.time() - start
-n_hits = sedona.read.parquet(OUT).count()
-
 print("=" * 50)
 print(f"Pings processed:       {n_pings:,}")
 print(f"Driver memory limit:   2g")
