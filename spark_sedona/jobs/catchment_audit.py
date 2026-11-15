@@ -52,4 +52,5 @@ print(f"Intersections found:   {n_hits:,}")
 print(f"Runtime (join+write):  {elapsed:.1f} seconds")
 print("=" * 50)
 
-input("Job finished. Open http://localhost:4040 for screenshots, then press Enter to exit...")
+print("Spark UI address:", sedona.sparkContext.uiWebUrl)
+input("Job finished. Open the address above, take screenshots, then press Enter to exit...")

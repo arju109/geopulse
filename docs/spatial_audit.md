@@ -26,7 +26,10 @@ On the 10,000-ping sample, the buffer method found 7,485 intersections and a sep
 - Overlapping catchments (S1 and S2) mean one ping can match more than one store, so intersections can exceed what a single-store count suggests.
 
 ## Evidence
-Spark UI screenshots (Jobs and Executors tabs) will be added in `docs/images/` on Day 2.
+Spark UI during the 2M-ping run (driver memory 2 GB): 10 jobs completed, 0 failed, no out-of-memory errors.
 
+![Jobs tab](images/spark_jobs.png)
+![Executors tab](images/spark_executors.png)
+![SQL plan](images/spark_sql.png)
 ## Next
 - Scale test with 5M pings at 2g and 4g driver memory (Day 3).
