@@ -33,3 +33,9 @@ Spark UI during the 2M-ping run (driver memory 2 GB): 10 jobs completed, 0 faile
 ![SQL plan](images/spark_sql.png)
 ## Next
 - Scale test with 5M pings at 2g and 4g driver memory (Day 3).
+
+## Scaling test: realistic data (3M pings, 20,000 devices)
+| Driver memory | Pings | Intersections | Runtime | Result |
+|---|---|---|---|---|
+| 2g | 3,000,000 | ... | ... s | OK |
+| 4g | 3,000,000 | ... | ... s | OK |
