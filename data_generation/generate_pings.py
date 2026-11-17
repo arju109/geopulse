@@ -4,6 +4,8 @@ Usage: python data_generation/generate_pings.py [n_pings] [n_devices]
 import sys
 import numpy as np
 import pandas as pd
+import sys
+MEM = sys.argv[1] if len(sys.argv) > 1 else "2g"
 
 n = int(sys.argv[1]) if len(sys.argv) > 1 else 3_000_000
 n_dev = int(sys.argv[2]) if len(sys.argv) > 2 else 20_000
@@ -71,7 +73,9 @@ pings = pd.DataFrame({
     "ping_ts": ts,
 })
 
-pings.to_parquet(f"spark_sedona/sample_data/pings_real_{n}.parquet", index=False)
+pings["ping_ts"] = pings["ping_ts"].astype("datetime64[us]")
+pings.to_parquet(f"spark_sedona/sample_data/pings_real_{n}.parquet", index=False,
+                 coerce_timestamps="us", allow_truncated_timestamps=True)
 stores.to_csv("spark_sedona/sample_data/stores_sample.csv", index=False)
 
 print(f"{len(pings):,} pings, {n_dev:,} devices written")

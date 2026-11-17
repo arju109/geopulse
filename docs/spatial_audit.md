@@ -37,5 +37,5 @@ Spark UI during the 2M-ping run (driver memory 2 GB): 10 jobs completed, 0 faile
 ## Scaling test: realistic data (3M pings, 20,000 devices)
 | Driver memory | Pings | Intersections | Runtime | Result |
 |---|---|---|---|---|
-| 2g | 3,000,000 | ... | ... s | OK |
-| 4g | 3,000,000 | ... | ... s | OK |
+| 2g | 3,000,000 |  594,855 |  7.8 s | OK |
+| 4g | 3,000,000 |  594,855 |  6.7 s | OK |
