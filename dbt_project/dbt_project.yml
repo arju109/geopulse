@@ -1,0 +1,8 @@
+name: geopulse
+version: "1.0"
+profile: geopulse
+model-paths: ["models"]
+models:
+  geopulse:
+    marts:
+      +materialized: table

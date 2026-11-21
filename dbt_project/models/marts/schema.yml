@@ -1,0 +1,8 @@
+version: 2
+models:
+  - name: fct_hourly_visitors
+    columns:
+      - name: store_id
+        tests: [not_null]
+      - name: unique_visitors
+        tests: [not_null]
