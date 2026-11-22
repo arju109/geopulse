@@ -6,3 +6,17 @@ models:
         tests: [not_null]
       - name: unique_visitors
         tests: [not_null]
+  - name: fct_hourly_profile
+    columns:
+      - name: hour_of_day
+        tests: [not_null, unique]
+      - name: period
+        tests:
+          - accepted_values:
+              values: ['morning_peak', 'evening_peak', 'off_peak']
+  - name: fct_cannibalization
+    columns:
+      - name: store_a
+        tests: [not_null]
+      - name: pct_of_a_also_visiting_b
+        tests: [not_null]
