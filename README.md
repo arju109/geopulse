@@ -1,12 +1,41 @@
 # GeoPulse-Hyper-Local-Retail-Mobility-Analytics
+
 GeoPulse: Hyper-Local Retail Mobility Analytics – A Data Analytics project focused on geographical retail patterns, customer mobility, location analysis, and interactive dashboards.
 
 # Project Overview
+
 GeoPulse is a Data Analytics project focused on understanding geographical retail patterns, customer mobility, and location-based business opportunities.
 
 The project aims to collect, clean, analyze, and visualize data to identify retail trends, geographical patterns, and actionable business insights.
 
+
+
+\## Quick start
+
+See \[docs/setup\_guide.md](docs/setup\_guide.md) for setup and \[docs/architecture.md](docs/architecture.md) for the design.
+
+
+
+\## Status
+
+| Module | Status |
+
+|---|---|
+
+| Data generation | Done |
+
+| Sedona spatial job and audit | Done (docs/spatial\_audit.md) |
+
+| Snowflake load | Done |
+
+| dbt models and tests | Done (docs/dbt\_integrity\_check.md) |
+
+| Kepler.gl dashboard | Planned |
+
+| Airflow DAG | Planned |
+
 # Project Objectives
+
 A.Collect and understand relevant datasets.
 
 B.Clean and validate data using Python.
@@ -23,7 +52,8 @@ G.Develop an interactive Power BI dashboard.
 
 H.Present actionable business insights.
 
-# Technologies & Tools
+# Technologies \& Tools
+
 Python
 
 Pandas
@@ -45,6 +75,7 @@ Google Colab
 GitHub
 
 # Upcoming Tasks
+
 a- Data collection and validation.
 
 b- Data cleaning and preprocessing.
@@ -60,6 +91,7 @@ f- Business insights and recommendations.
 g- Final project report and presentation.
 
 # Expected Deliverables
+
 Source Code
 
 Project Documentation
@@ -71,3 +103,4 @@ PowerPoint Presentation
 Model Evaluation Results
 
 Final Project Demonstration
+
